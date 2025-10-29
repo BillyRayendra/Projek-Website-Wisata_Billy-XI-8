@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  color: #000;
+  background-color: #fff;
+}
+
+/* === NAVBAR === */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #f8d000;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search {
+  color: #fff;
+  font-size: small;
+  cursor: pointer;
+}
+
+main h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.kontak_form {
+  max-width: 600px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+main section{
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  animation: katas ease 2s;
+}
+
+@keyframes katas {
+  0%{
+    opacity: 0;
+    transform: translateY(400px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.kontak_form input,
+.kontak_form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.kontak_form button {
+  background: #354A5F;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all linear 0.1s;
+}
+
+.kontak_form button:hover {
+  background: #2a3b4a;
+  transform: scale(1.03);
+}
+
+aside {
+  background-color: #DB9B15;
+  border-radius: 7px;
+  margin-top: 6%;
+  padding: 20px;
+  line-height: 16px;
+  color: white;
+  height: 100px;
+    }
+
+    footer {
+    text-align: center;
+    background-color: #354A5F;
+    color: white;
+    padding: 20px;
+    margin-top: 1%;
+    }
+
+    main section {
+        margin-top: 50px;
+    }
+
+    .footer {
+  background: #0a0a0a;
+  color: #ccc;
+  /* Footer full width */
+  padding: 30px 0; 
+  width: 100%;
+}
+
+.footer-content {
+  /* Konten footer tetap di dalam batas (8%) */
+  padding: 0 8%; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-left img {
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+.footer-left p {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.footer-right a {
+  color: #ccc;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.footer-right a:hover {
+  color: #fff;
+}

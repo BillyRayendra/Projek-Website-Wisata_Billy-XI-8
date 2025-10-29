@@ -1,0 +1,388 @@
+/* === GLOBAL RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  color: #000;
+  background-color: #fff;
+}
+
+/* === NAVBAR === */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #f8d000;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search {
+  color: #fff;
+  font-size: small;
+  cursor: pointer;
+}
+
+/* === BANNER === */
+.banner {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.banner img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === BANNER TEXT (Pesona Indonesia & Perbaikan Hover) === */
+.banner-text {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  text-align: center;
+  z-index: 50; 
+}
+
+.banner-text h1 {
+  /* SOLUSI HOVER LEBAR: Membuat elemen hanya selebar teks */
+  display: inline-block; 
+  
+  font-size: 80px;
+  color: #141414;
+  font-weight: 800;
+  letter-spacing: 2px;
+  cursor: pointer;
+  /* Animasi Awal */
+  opacity: 0;
+  transform: translateY(20px); 
+  animation: fadeInFromBottom 1.2s ease-out 0.5s forwards; 
+  transition: color 0.3s ease; 
+  padding: 5px 10px;
+}
+
+/* Hover: Berubah menjadi Oren */
+.banner-text h1:hover {
+  color: orange;
+}
+
+/* Keyframes untuk Animasi "Pesona Indonesia" */
+@keyframes fadeInFromBottom {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* === END BANNER TEXT === */
+
+
+.destination-bar {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.destinations {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  font-weight: 500;
+}
+
+.destinations span.active {
+  font-weight: 700;
+  position: relative;
+}
+
+.destinations span.active::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 8px solid transparent;
+  border-bottom: 10px solid #fff;
+}
+
+/*peta*/
+.peta_section {
+  padding: 30px ;
+  background-color: #f1eec3;
+}
+
+.peta_section div {
+  text-align: center;
+}
+
+.peta_section div img {
+  height: 110vh;
+ margin: auto;
+}
+
+
+/* --- WISATA SECTION (SEJAJAR DAN SLIDER BARU) --- */
+.tourism-showcase {
+  background: #fff;
+  /* Atur padding horizontal di sini untuk batas kiri-kanan konten */
+  padding: 80px 8%; 
+  text-align: left;
+  
+  /* Flexbox untuk tata letak sejajar (Teks kiri, Slider kanan) */
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  gap: 60px; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+
+.tourism-text {
+  max-width: 400px; 
+  margin: 0; 
+}
+
+.tourism-text h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.tourism-text p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.tourism-btn { 
+  padding: 10px 20px;
+  background-color: #f8d000;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.tourism-btn:hover {
+  background-color: #e0bb00;
+}
+
+/* === GALLERY/SLIDER (1 BARIS, OPACITY) === */
+.tourism-slider {
+  position: relative;
+  /* Tinggi 1 baris */
+  height: 400px; 
+  width: 100%; 
+  max-width: 600px; 
+  margin: 0; 
+  overflow: hidden; 
+}
+
+/* Sembunyikan radio buttons */
+.tourism-slider input[type="radio"] {
+  display: none;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Atur opacity awal 0 */
+  opacity: 0; 
+  transition: opacity 0.6s ease-in-out; 
+}
+
+/* Atur slide yang checked/aktif menjadi opacity 1 */
+#slide1:checked ~ .slides .s1,
+#slide2:checked ~ .slides .s2,
+#slide3:checked ~ .slides .s3,
+#slide4:checked ~ .slides .s4,
+#slide5:checked ~ .slides .s5,
+#slide6:checked ~ .slides .s6 {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.slide span {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 15px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* Arrow Sederhana */
+.slider-arrows {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none; 
+  z-index: 55; 
+}
+
+.arrow {
+  display: none; /* Sembunyikan semua panah secara default */
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s;
+  pointer-events: auto; 
+  margin: 0 10px; 
+}
+
+.arrow:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Menampilkan panah yang sesuai dengan slide aktif (Fungsionalitas) */
+
+/* Slide 1: Prev (6), Next (2) */
+#slide1:checked ~ .slider-arrows .left[for="slide5"],
+#slide1:checked ~ .slider-arrows .right[for="slide2"] {
+  display: block;
+}
+
+/* Slide 2: Prev (1), Next (3) */
+#slide2:checked ~ .slider-arrows .left[for="slide1"],
+#slide2:checked ~ .slider-arrows .right[for="slide3"] {
+  display: block;
+}
+
+/* Slide 3: Prev (2), Next (4) */
+#slide3:checked ~ .slider-arrows .left[for="slide2"],
+#slide3:checked ~ .slider-arrows .right[for="slide4"] {
+  display: block;
+}
+
+/* Slide 4: Prev (3), Next (5) */
+#slide4:checked ~ .slider-arrows .left[for="slide3"],
+#slide4:checked ~ .slider-arrows .right[for="slide5"] {
+  display: block;
+}
+
+/* Slide 5: Prev (4), Next (6) */
+#slide5:checked ~ .slider-arrows .left[for="slide4"],
+#slide5:checked ~ .slider-arrows .right[for="slide1"] {
+  display: block;
+}
+
+/* Sembunyikan navigasi lama yang mungkin masih ada di HTML */
+.nav, .dots, .nav-complex {
+    display: none;
+}
+
+
+/* --- FOOTER (LEBAR PENUH) --- */
+.footer {
+  background: #0a0a0a;
+  color: #ccc;
+  /* Footer full width */
+  padding: 30px 0; 
+  width: 100%;
+}
+
+.footer-content {
+  /* Konten footer tetap di dalam batas (8%) */
+  padding: 0 8%; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-left img {
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+.footer-left p {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.footer-right a {
+  color: #ccc;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.footer-right a:hover {
+  color: #fff;
+}
