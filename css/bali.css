@@ -1,4 +1,3 @@
-/* === GLOBAL RESET === */
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +15,7 @@ body {
   background-color: #fff;
 }
 
-/* === NAVBAR === */
+/*navbar*/
 .navbar {
   position: fixed;
   top: 0;
@@ -61,7 +60,7 @@ body {
   cursor: pointer;
 }
 
-/* === BANNER === */
+/*banner*/
 .banner {
   position: relative;
   height: 100vh;
@@ -75,7 +74,6 @@ body {
   object-fit: cover;
 }
 
-/* === BANNER TEXT (Pesona Indonesia & Perbaikan Hover) === */
 .banner-text {
   position: absolute;
   top: 50%; 
@@ -86,15 +84,14 @@ body {
 }
 
 .banner-text h1 {
-  /* SOLUSI HOVER LEBAR: Membuat elemen hanya selebar teks */
   display: inline-block; 
   
   font-size: 80px;
-  color: #141414;
+  color: #fff;
   font-weight: 800;
   letter-spacing: 2px;
   cursor: pointer;
-  /* Animasi Awal */
+
   opacity: 0;
   transform: translateY(20px); 
   animation: fadeInFromBottom 1.2s ease-out 0.5s forwards; 
@@ -102,27 +99,26 @@ body {
   padding: 5px 10px;
 }
 
-/* Hover: Berubah menjadi Oren */
 .banner-text h1:hover {
   color: orange;
+  cursor: default;
 }
 
-/* Keyframes untuk Animasi "Pesona Indonesia" */
 @keyframes fadeInFromBottom {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-/* === END BANNER TEXT === */
 
-
+/*navbawah*/
 .destination-bar {
   position: absolute;
   bottom: 40px;
   width: 100%;
   text-align: center;
   color: #fff;
+
 }
 
 .destinations {
@@ -130,23 +126,19 @@ body {
   justify-content: center;
   gap: 32px;
   font-weight: 500;
+    text-decoration: none;
 }
 
-.destinations span.active {
-  font-weight: 700;
-  position: relative;
+.destinations a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.15s ease
 }
 
-.destinations span.active::after {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 8px solid transparent;
-  border-bottom: 10px solid #fff;
+.destinations a:hover {
+  color: orange;
+  transform: scale(1.05);
 }
-
 /*peta*/
 .peta_section {
   padding: 30px ;
@@ -204,11 +196,12 @@ body {
   font-weight: 600;
   cursor: pointer;
   margin-top: 20px;
-  transition: background-color 0.3s;
+  transition: all 0.2s ease;
 }
 
 .tourism-btn:hover {
-  background-color: #e0bb00;
+  background-color: orange;
+  transform: scale(1.1);
 }
 
 /* === GALLERY/SLIDER (1 BARIS, OPACITY) === */

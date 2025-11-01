@@ -101,6 +101,7 @@ body {
 
 .banner-text h1:hover {
   color: orange;
+  cursor: default;
 }
 
 @keyframes fadeInFromBottom {
@@ -131,12 +132,18 @@ body {
 .destinations a {
   text-decoration: none;
   color: inherit;
+  transition: all 0.15s ease
+}
+
+.destinations a:hover {
+  color: orange;
+  transform: scale(1.05);
 }
 
 /*peta*/
 .peta_section {
   padding: 30px ;
-  background-color: #f1eec3;
+  background-color: rgb(243, 231, 216);
 }
 
 .peta_section div {
@@ -185,12 +192,15 @@ body {
   font-weight: 600;
   cursor: pointer;
   margin-top: 20px;
-  transition: background-color 0.3s;
+  transition: all 0.2s ease;
 }
 
 .tourism-btn:hover {
-  background-color: #e0bb00;
+  background-color: orange;
+  transform: scale(1.1);
 }
+
+
 
 
 .destinasi-slider {

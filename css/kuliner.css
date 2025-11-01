@@ -1,4 +1,3 @@
-/* === GLOBAL RESET === */
 * {
   margin: 0;
   padding: 0;
@@ -14,10 +13,9 @@ img {
 body {
   color: #000;
   background-color: #fff;
-  margin-top: 90px;
 }
 
-/* === NAVBAR === */
+/*navbar*/
 .navbar {
   position: fixed;
   top: 0;
@@ -62,170 +60,231 @@ body {
   cursor: pointer;
 }
 
-main {
-      padding: 20px;
-      text-align: center;
-    }
+/*banner*/
+.banner {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+  padding-top: 80px;
+}
 
-    section {
+.banner img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  text-align: center;
+  z-index: 50; 
+  padding-top: 80px;
+}
+
+.banner-text h1 {
+  display: inline-block; 
+  
+  font-size: 80px;
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 2px;
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(20px); 
+  animation: fadeInFromBottom 1.2s ease-out 0.5s forwards; 
+  transition: color 0.3s ease; 
+  padding: 5px 10px;
+}
+
+.banner-text h1:hover {
+  color: orange;
+}
+
+@keyframes fadeInFromBottom {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*main*/
+.sec0 {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-        margin-bottom: 30px;
-        margin-top: 30px;
-        line-height: 30px;
+        gap: 25px;
+        align-items: center;
+        padding: 20px;
+        width: 100%;
+        transition: all 0.15s linear;
     }
 
-    section a article {
-        width: 400px;
-        background-color: rgb(245, 228, 207);
-        padding: 20px 10px;
-        border-radius: 15px;
-        box-shadow: 6px 5px rgb(153, 153, 153);
-        text-align: center;
-        height: 300px;
-        transition: all linear 0.1s;
+    .sec0:hover {
+        transform: translatey(-5px);
+        box-shadow: 5px 5px rgb(165, 165, 165);
     }
 
-    section a article:hover {
-        transform: scale(1.1);
-        background-color: #DB9B15;
-        color: white;
+    .sec0 article {
+        text-align: justify;
     }
 
-    .c1 {
-        display: block;
-        animation: c1 ease 1s;
-        position: relative;
-    }
-    @keyframes c1 {
-    0%{left: -1500px;}
-    50%{left: 50px;}
-    100%{left: 0px;}
-    }
-    .c2 {
-        display: block;
-        animation: c2 ease 1.155s;
-        position: relative;
-    }
-    @keyframes c2 {
-    0%{left: -1500px;}
-    50%{left: 50px;}
-    100%{left: 0px;}
-    }
-    .c3 {
-        display: block;
-        animation: c3 ease 1.3s;
-        position: relative;
-    }
-    @keyframes c3 {
-    0%{left: -1500px;}
-    50%{left: 50px;}
-    100%{left: 0px;}
-    }
-    .c4 {
-        display: block;
-        animation: c4 ease 1.45s;
-        position: relative;
-    }
-    @keyframes c4 {
-    0%{left: -1500px;}
-    50%{left: 50px;}
-    100%{left: 0px;}
-    }
-    .c5 {
-        display: block;
-        animation: c5 ease 1.6s;
-        position: relative;
-    }
-    @keyframes c5 {
-    0%{left: -1500px;}
-    50%{left: 50px;}
-    100%{left: 0px;}
-    }
-    .c6 {
-        display: block;
-        animation: c6 ease 1.75s;
-        position: relative;
-    }
-    @keyframes c6 {
-    0%{left: -1500px;}
-    50%{left: 50px;}
-    100%{left: 0px;}
-    }
-    .c7 {
-        display: block;
-        animation: c7 ease 1.9s;
-        position: relative;
-    }
-    @keyframes c7 {
-    0%{left: -1500px;}
-    50%{left: 50px;}
-    100%{left: 0px;}
-    }
-    .c8 {
-        display: block;
-        animation: c8 ease 2.05s;
-        position: relative;
-    }
-    @keyframes c8 {
-    0%{left: -1500px;}
-    50%{left: 50px;}
-    100%{left: 0px;}
-    }
-    .c9 {
-        display: block;
-        animation: c9 ease 2.2s;
-        position: relative;
-    }
-    @keyframes c9 {
-    0%{left: -1500px;}
-    50%{left: 50px;}
-    100%{left: 0px;}
-    }
-    .c10 {
-        display: block;
-        animation: c10 ease 2.35s;
-        position: relative;
-    }
-    @keyframes c10 {
-    0%{left: -1500px;}
-    50%{left: 50px;}
-    100%{left: 0px;}
+    .sec0 h3 {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 30px;
     }
 
-    section a {
+    .sec0 p, .sec0 ul li {
+      font-size: 13px;
+    }
+
+    .sec0 article img {
+        width: 1900px;
+        height: 80vh;
+        object-fit: cover;
+        transition: all 0.1s linear;
+    }
+    .sec4 article img {
+        width: 1400px;
+        height: 90vh;
+        object-fit: cover;
+        transition: all 0.1s linear;
+    }
+
+    .sec5 article img {
+        width: 1450px;
+        height: 90vh;
+        object-fit: cover;
+        transition: all 0.1s linear;
+    }
+    .sec7 article img {
+        width: 1450px;
+        height: 90vh;
+        object-fit: cover;
+        transition: all 0.1s linear;
+    }
+
+    .sec8 article img {
+        width: 1620px;
+        height: 90vh;
+        object-fit: cover;
+        transition: all 0.1s linear;
+    }
+
+    .sec9 article img {
+        width: 1700px;
+        height: 90vh;
+        object-fit: cover;
+        transition: all 0.1s linear;
+    }
+
+    .sec0 article img:hover {
+        transform: scale(1.02);
+    }
+
+    .sumber a{
         text-decoration: none;
         color: inherit;
-        display: block;
+        transition: all 0.1s linear;
+        display: inline-block;
     }
 
-    section a article p {
-        line-height: 10px;
-        font-size: 13px;
+    .sumber a:hover {
+        transform: scale(1.02);
+        color: #3a18ff;
+        text-decoration: underline;
     }
 
-    section a article img {
-        width: 90%;
-        height: 80%;
-        object-fit: cover;
-        border-radius: 20px;
-        display: block;
-        margin: 0 auto 10px;
+    main h3 {
+        font-weight: bold;
+    }
+    .img4 {
+        height: 250px;
     }
 
-    /* --- FOOTER (LEBAR PENUH) --- */
+    .sec2 {
+        animation: kkanan 1s ease ;
+        position: relative;
+    }
+    .sec3 {
+        animation: kkiri 1s ease ;
+        animation-delay: 0.7s;
+        animation-fill-mode: backwards;
+        position: relative;
+        background-color: rgb(243, 231, 216);
+    }
+    .sec4 {
+        animation: kkanan 1s ease ;
+        animation-delay: 1.7s;
+        animation-fill-mode: backwards;
+        position: relative;
+
+    }
+    .sec5 {
+        animation: kkiri 1s ease ;
+        animation-delay: 2.7s;
+        animation-fill-mode: backwards;
+        position: relative;
+        background-color: rgb(243, 231, 216);
+    }
+    .sec6 {
+        animation: kkanan 1s ease ;
+        animation-delay: 3.7s;
+        animation-fill-mode: backwards;
+        position: relative;
+
+    }
+    .sec7 {
+        animation: kkiri 1s ease ;
+        animation-delay: 4.7s;
+        animation-fill-mode: backwards;
+        position: relative;
+        background-color: rgb(243, 231, 216);
+    }
+    .sec8 {
+        animation: kkanan 1s ease ;
+        animation-delay: 5.7s;
+        animation-fill-mode: backwards;
+        position: relative;
+    }
+    .sec9 {
+        animation: kkiri 1s ease ;
+        animation-delay: 6.7s;
+        animation-fill-mode: backwards;
+        position: relative;
+        background-color: rgb(243, 231, 216);
+    }
+    @keyframes kkanan{
+        0%{
+            opacity: 0;
+            left: -1500px;
+        }
+        100%{
+            opacity: 1;
+            left: 0;
+        }
+    }
+    @keyframes kkiri{
+        0%{
+            opacity: 0;
+            left: 1500px;
+        }
+        100%{
+            opacity: 1;
+            left: 0;
+        }
+    }
+    /*footer*/
 .footer {
   background: #0a0a0a;
   color: #ccc;
-  /* Footer full width */
   padding: 30px 0; 
   width: 100%;
 }
 
 .footer-content {
-  /* Konten footer tetap di dalam batas (8%) */
   padding: 0 8%; 
   display: flex;
   justify-content: space-between;

@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  color: #000;
+  background-color: #fff;
+}
+
+/*navbar*/
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #f8d000;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search {
+  color: #fff;
+  font-size: small;
+  cursor: pointer;
+}
+
+/*banner*/
+.banner {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+.banner img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  text-align: center;
+  z-index: 50; 
+  padding-top: 80px;
+  width: 100%;
+}
+
+.banner-text h1 {
+  display: inline-block; 
+  
+  font-size: 50px;
+  color: #000000;
+  font-weight: 800;
+  letter-spacing: 2px;
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(20px); 
+  animation: fadeInFromBottom 1.2s ease-out 0.5s forwards; 
+  transition: color 0.3s ease; 
+  padding: 5px 10px;
+}
+
+.banner-text h1:hover {
+  color: orange;
+}
+
+@keyframes fadeInFromBottom {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ticket-grid {
+            display: grid;
+            /* Membuat 2 kolom dengan lebar masing-masing 600px */
+            grid-template-columns: 600px 600px;
+            /* Memberi jarak antar baris dan kolom */
+            gap: 20px;
+            /* Memastikan grid terpusat (total lebar 1200px + gap) */
+            justify-content: center;
+            padding: 30px;
+            margin: 0 auto;
+            max-width: 1300px; /* Batasan maksimum agar konten tetap di tengah */
+        }
+        
+        .ticket-grid article {
+            /* Tinggi yang diminta */
+            height: 100px; 
+            /* Mengatur tata letak internal artikel */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .ticket-grid article:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Styling Konten Tiket */
+        .ticket-grid article > div:nth-child(1) {
+            /* Logo Maskapai */
+            padding-right: 15px;
+        }
+        .ticket-grid article > div:nth-child(1) img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            /* Placeholder Logo Pesawat */
+            content: url('https://placehold.co/60x60/f8d000/000?text=GA');
+        }
+
+        .ticket-grid article > div:nth-child(2) {
+            /* Rute dan Tanggal */
+            flex-grow: 1;
+            text-align: left;
+        }
+        .ticket-grid article h3 {
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 2px;
+        }
+        .ticket-grid article p {
+            font-size: 13px;
+            color: #555;
+        }
+
+        .ticket-grid article > div:nth-child(3) {
+            /* Harga */
+            text-align: right;
+            padding-left: 15px;
+        }
+        .ticket-grid article > div:nth-child(3) p:first-child {
+            font-weight: 800;
+            color: #ef4444; /* Warna Merah untuk Harga */
+            font-size: 18px;
+        }
+        .ticket-grid article > div:nth-child(3) p:last-child {
+            font-size: 11px;
+            color: #777;
+        }
+
+        /* Responsiveness untuk tampilan mobile: mengubah menjadi 1 kolom */
+        @media (max-width: 1280px) {
+            .ticket-grid {
+                /* Untuk layar lebih kecil dari 1280px, ubah ke 1 kolom dan gunakan fraksi (1fr) untuk responsif */
+                grid-template-columns: 1fr; 
+                gap: 15px;
+                padding: 15px;
+            }
+            .ticket-grid article {
+                /* Biarkan lebar artikel mengisi container (1fr) */
+                height: 120px; 
+            }
+        }
