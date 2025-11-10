@@ -6,14 +6,15 @@
   <title>Travel Indonesia</title>
   <link rel="stylesheet" href="css/penerbangan.css">
 </head>
-<body>
-  <header class="navbar">
+<body class="bg-gray-50">
+
+    <header class="navbar">
     <div class="logo">
       <img src="foto/logo.webp">
     </div>
     <nav class="nav-links">
       <a href="index.html">Wisata</a>
-      <a href="#">Booking Penerbangan</a>
+      <a href="penerbangan.html">Booking Penerbangan</a>
       <a href="kuliner.html">Kuliner Indonesia</a>
       <a href="kontak.html">Kontak</a>
     </nav>
@@ -23,27 +24,32 @@
   </header>
 
   <section class="banner">
-    <div class="banner-video">
-     <img src="foto/penerbangan.jpg">
+    <div>
+      <img src="foto/penerbangan.jpg">
     </div>
-
     <div class="banner-text">
-      <h1>Booking Penerbangan</h1>
+        <h1>Pemesanan Tiket</h1>
+      <h4>tentukan transportasi dan tanggal keberangkatanmu</h4>
     </div>
-  </section>
+  </section><br><br>
 
     <main>
-        <section>
+        <section class="text1">
             <h1>Tiket Pesawat Domestik 2025</h1>
+            <p>Menampilkan 10 hasil penerbangan untuk rute populer</p>
         </section>
-        <section>
+        
+        <!-- SECTION DENGAN LAYOUT GRID 2X5 -->
+        <section class="ticket-grid">
+            
+            <!-- Artikel Tiket ke-1 -->
             <article>
                 <div>
-                    <img src="">
+                    <img src="foto/garudaindonesia.png" alt="Logo Maskapai">
                 </div>
                 <div>
                     <h3>Garuda Indonesia</h3>
-                    <p>Jakarta - Denpasar</p>
+                    <p>Jakarta (CGK) - Denpasar (DPS)</p>
                     <p>Senin, 1 Des 2025</p>
                 </div>
                 <div>
@@ -51,133 +57,165 @@
                     <p>Sekali Jalan</p>
                 </div>
             </article>
+
+            <!-- Artikel Tiket ke-2 -->
             <article>
                 <div>
-                    <img src="">
+                    <img src="foto/lionair.png" alt="Logo Maskapai">
+                </div>
+                <div>
+                    <h3>Lion Air (Direct)</h3>
+                    <p>Surabaya (SUB) - Lombok (LOP)</p>
+                    <p>Senin, 1 Des 2025</p>
+                </div>
+                <div>
+                    <p>Rp. 615.000</p>
+                    <p>Sekali Jalan</p>
+                </div>
+            </article>
+
+            <!-- Artikel Tiket ke-3 -->
+            <article>
+                <div>
+                    <img src="foto/batikair.png" alt="Logo Maskapai">
+                </div>
+                <div>
+                    <h3>Batik Air</h3>
+                    <p>Jakarta (CGK) - Medan (KNO)</p>
+                    <p>Selasa, 2 Des 2025</p>
+                </div>
+                <div>
+                    <p>Rp. 910.000</p>
+                    <p>Sekali Jalan</p>
+                </div>
+            </article>
+
+            <!-- Artikel Tiket ke-4 -->
+            <article>
+                <div>
+                    <img src="foto/citilink.png" alt="Logo Maskapai">
+                </div>
+                <div>
+                    <h3>Citilink</h3>
+                    <p>Yogyakarta (YIA) - Jakarta (CGK)</p>
+                    <p>Selasa, 2 Des 2025</p>
+                </div>
+                <div>
+                    <p>Rp. 550.000</p>
+                    <p>Sekali Jalan</p>
+                </div>
+            </article>
+
+            <!-- Artikel Tiket ke-5 -->
+            <article>
+                <div>
+                    <img src="foto/garudaindonesia.png" alt="Logo Maskapai">
                 </div>
                 <div>
                     <h3>Garuda Indonesia</h3>
-                    <p>Jakarta - Denpasar</p>
-                    <p>Senin, 1 Des 2025</p>
+                    <p>Jakarta (CGK) - Denpasar (DPS)</p>
+                    <p>Rabu, 3 Des 2025</p>
                 </div>
                 <div>
                     <p>Rp. 830.000</p>
                     <p>Sekali Jalan</p>
                 </div>
             </article>
+
+            <!-- Artikel Tiket ke-6 -->
             <article>
                 <div>
-                    <img src="">
+                    <img src="foto/lionair.png" alt="Logo Maskapai">
+                </div>
+                <div>
+                    <h3>Lion Air (Direct)</h3>
+                    <p>Jakarta (CGK) - Makassar (UPG)</p>
+                    <p>Rabu, 3 Des 2025</p>
+                </div>
+                <div>
+                    <p>Rp. 1.120.000</p>
+                    <p>Sekali Jalan</p>
+                </div>
+            </article>
+
+            <!-- Artikel Tiket ke-7 -->
+            <article>
+                <div>
+                    <img src="foto/pelitaair.webp" alt="Logo Maskapai">
+                </div>
+                <div>
+                    <h3>Pelita Air</h3>
+                    <p>Bandung (BDO) - Denpasar (DPS)</p>
+                    <p>Kamis, 4 Des 2025</p>
+                </div>
+                <div>
+                    <p>Rp. 785.000</p>
+                    <p>Sekali Jalan</p>
+                </div>
+            </article>
+
+            <!-- Artikel Tiket ke-8 -->
+            <article>
+                <div>
+                    <img src="foto/garudaindonesia.png" alt="Logo Maskapai">
                 </div>
                 <div>
                     <h3>Garuda Indonesia</h3>
-                    <p>Jakarta - Denpasar</p>
-                    <p>Senin, 1 Des 2025</p>
+                    <p>Jakarta (CGK) - Denpasar (DPS)</p>
+                    <p>Kamis, 4 Des 2025</p>
                 </div>
                 <div>
                     <p>Rp. 830.000</p>
                     <p>Sekali Jalan</p>
                 </div>
             </article>
+
+            <!-- Artikel Tiket ke-9 -->
             <article>
                 <div>
-                    <img src="">
+                    <img src="foto/superairjet.png" alt="Logo Maskapai">
                 </div>
                 <div>
-                    <h3>Garuda Indonesia</h3>
-                    <p>Jakarta - Denpasar</p>
-                    <p>Senin, 1 Des 2025</p>
+                    <h3>Super Air Jet</h3>
+                    <p>Denpasar (DPS) - Jakarta (CGK)</p>
+                    <p>Jumat, 5 Des 2025</p>
                 </div>
                 <div>
-                    <p>Rp. 830.000</p>
+                    <p>Rp. 799.000</p>
                     <p>Sekali Jalan</p>
                 </div>
             </article>
+
+            <!-- Artikel Tiket ke-10 -->
             <article>
                 <div>
-                    <img src="">
+                    <img src="foto/lionair.png" alt="Logo Maskapai">
                 </div>
                 <div>
-                    <h3>Garuda Indonesia</h3>
-                    <p>Jakarta - Denpasar</p>
-                    <p>Senin, 1 Des 2025</p>
+                    <h3>Lion Air</h3>
+                    <p>Jakarta (CGK) - Denpasar (DPS)</p>
+                    <p>Jumat, 5 Des 2025</p>
                 </div>
                 <div>
-                    <p>Rp. 830.000</p>
-                    <p>Sekali Jalan</p>
-                </div>
-            </article>
-            <article>
-                <div>
-                    <img src="">
-                </div>
-                <div>
-                    <h3>Garuda Indonesia</h3>
-                    <p>Jakarta - Denpasar</p>
-                    <p>Senin, 1 Des 2025</p>
-                </div>
-                <div>
-                    <p>Rp. 830.000</p>
-                    <p>Sekali Jalan</p>
-                </div>
-            </article>
-            <article>
-                <div>
-                    <img src="">
-                </div>
-                <div>
-                    <h3>Garuda Indonesia</h3>
-                    <p>Jakarta - Denpasar</p>
-                    <p>Senin, 1 Des 2025</p>
-                </div>
-                <div>
-                    <p>Rp. 830.000</p>
-                    <p>Sekali Jalan</p>
-                </div>
-            </article>
-            <article>
-                <div>
-                    <img src="">
-                </div>
-                <div>
-                    <h3>Garuda Indonesia</h3>
-                    <p>Jakarta - Denpasar</p>
-                    <p>Senin, 1 Des 2025</p>
-                </div>
-                <div>
-                    <p>Rp. 830.000</p>
-                    <p>Sekali Jalan</p>
-                </div>
-            </article>
-            <article>
-                <div>
-                    <img src="">
-                </div>
-                <div>
-                    <h3>Garuda Indonesia</h3>
-                    <p>Jakarta - Denpasar</p>
-                    <p>Senin, 1 Des 2025</p>
-                </div>
-                <div>
-                    <p>Rp. 830.000</p>
-                    <p>Sekali Jalan</p>
-                </div>
-            </article>
-            <article>
-                <div>
-                    <img src="">
-                </div>
-                <div>
-                    <h3>Garuda Indonesia</h3>
-                    <p>Jakarta - Denpasar</p>
-                    <p>Senin, 1 Des 2025</p>
-                </div>
-                <div>
-                    <p>Rp. 830.000</p>
+                    <p>Rp. 710.000</p>
                     <p>Sekali Jalan</p>
                 </div>
             </article>
         </section>
     </main>
+
+    <footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <img src="foto/logo.webp">
+      <p>&copy; 2025 Travel Indonesia. Semua Hak Dilindungi.</p>
+    </div>
+    <div class="footer-right">
+      <a href="#">Tentang Kami</a>
+      <a href="#">Kebijakan Privasi</a>
+      <a href="#">Hubungi Kami</a>
+    </div>
+  </div>
+</footer>
 
 </body>

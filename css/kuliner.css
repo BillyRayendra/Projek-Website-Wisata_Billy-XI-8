@@ -114,12 +114,11 @@ body {
 
 /*main*/
 .sec0 {
-        border-radius: 10px;
-        margin: 30px;
         display: flex;
         gap: 25px;
         align-items: center;
-        padding: 10px;
+        padding: 20px;
+        width: 100%;
         transition: all 0.15s linear;
     }
 
@@ -138,7 +137,7 @@ body {
     }
 
     .sec0 p, .sec0 ul li {
-      font-size: 13px;
+      font-size: 16px;
     }
 
     .sec0 article img {
@@ -184,20 +183,7 @@ body {
     .sec0 article img:hover {
         transform: scale(1.02);
     }
-
-    .sumber a{
-        text-decoration: none;
-        color: inherit;
-        transition: all 0.1s linear;
-        display: inline-block;
-    }
-
-    .sumber a:hover {
-        transform: scale(1.02);
-        color: #3a18ff;
-        text-decoration: underline;
-    }
-
+    
     main h3 {
         font-weight: bold;
     }
@@ -208,57 +194,54 @@ body {
     .sec2 {
         animation: kkanan 1s ease ;
         position: relative;
-        background-color: rgb(250, 255, 231);
-        width: 94.5%;
     }
     .sec3 {
         animation: kkiri 1s ease ;
         animation-delay: 0.7s;
         animation-fill-mode: backwards;
         position: relative;
-        background-color: rgb(231, 231, 255);
+        background-color: rgb(243, 231, 216);
     }
     .sec4 {
         animation: kkanan 1s ease ;
         animation-delay: 1.7s;
         animation-fill-mode: backwards;
         position: relative;
-        background-color: rgb(250, 255, 231);
+
     }
     .sec5 {
         animation: kkiri 1s ease ;
         animation-delay: 2.7s;
         animation-fill-mode: backwards;
         position: relative;
-        background-color: rgb(231, 231, 255);
+        background-color: rgb(243, 231, 216);
     }
     .sec6 {
         animation: kkanan 1s ease ;
         animation-delay: 3.7s;
         animation-fill-mode: backwards;
         position: relative;
-        background-color: rgb(250, 255, 231);
+
     }
     .sec7 {
         animation: kkiri 1s ease ;
         animation-delay: 4.7s;
         animation-fill-mode: backwards;
         position: relative;
-        background-color: rgb(231, 231, 255);
+        background-color: rgb(243, 231, 216);
     }
     .sec8 {
         animation: kkanan 1s ease ;
         animation-delay: 5.7s;
         animation-fill-mode: backwards;
         position: relative;
-        background-color: rgb(250, 255, 231);
     }
     .sec9 {
         animation: kkiri 1s ease ;
         animation-delay: 6.7s;
         animation-fill-mode: backwards;
         position: relative;
-        background-color: rgb(231, 231, 255);
+        background-color: rgb(243, 231, 216);
     }
     @keyframes kkanan{
         0%{

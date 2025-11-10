@@ -1,0 +1,333 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  color: #000;
+  background-color: #fff;
+}
+
+/*navbar*/
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #f8d000;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search {
+  color: #fff;
+  font-size: small;
+  cursor: pointer;
+}
+
+/*banner*/
+.banner {
+position: relative;
+height: 100vh;
+overflow: hidden;
+margin-bottom: 0px;
+}
+
+.banner img {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.banner-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    background-color: #f7f7f7;
+    border-top: 3px solid #ccc;
+    z-index: 2;
+    color: #000;
+}
+
+.banner-text h4 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #555;
+    font-weight: 400;
+}
+
+.banner-text h1 {
+    margin: 5px 0 0 0;
+    font-size: 3rem; 
+}
+/*main*/
+/* --- Bagian Navigasi Tab (CSS Murni - Radio Button) --- */
+.main1 {
+    margin: 40px auto;
+    width: 80%;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 20px;
+}
+/* 1. Sembunyikan Input Radio Button */
+.info-tabs input[type="radio"] {
+    display: none;
+}
+
+.info-tabs {
+    width: 80%;
+    margin: 40px auto;
+}
+
+/* Navigasi Tab - Mengisi Penuh Lebar */
+.tab-nav {
+    display: flex;
+    border-bottom: 1px solid #ccc; 
+    border-left: 1px solid #ccc; /* Border kiri untuk tab pertama */
+    border-radius: 5px;
+}
+
+.tab-link {
+    background-color: #f1f1f1;
+    border: none;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc; /* Border kanan sebagai pemisah */
+    padding: 14px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+    margin: 0; 
+    flex: 1; /* Mengisi penuh lebar */
+    text-align: center; 
+    
+    /* Efek Menyatu */
+    margin-bottom: -3px; 
+}
+
+/* Kunci Fungsionalitas: Styling Tab Aktif (yang dicek) */
+.info-tabs input#tab1:checked ~ .tab-nav label[for="tab1"],
+.info-tabs input#tab2:checked ~ .tab-nav label[for="tab2"],
+.info-tabs input#tab3:checked ~ .tab-nav label[for="tab3"],
+.info-tabs input#tab4:checked ~ .tab-nav label[for="tab4"] {
+    background-color: white; 
+    color: black;
+    border-bottom: none; /* Border bawah hilang */
+}
+
+/* Konten Tab Container */
+.tab-content-container {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: none; 
+    padding: 20px;
+    /* Kunci: min-height dihapus, sehingga container hanya setinggi konten */
+}
+
+/* Sembunyikan semua konten secara default */
+.tab-content {
+    display: none;
+}
+
+/* Tampilkan HANYA konten yang sesuai dengan radio button yang 'checked' */
+.info-tabs input#tab1:checked ~ .tab-content-container #content1,
+.info-tabs input#tab2:checked ~ .tab-content-container #content2,
+.info-tabs input#tab3:checked ~ .tab-content-container #content3,
+.info-tabs input#tab4:checked ~ .tab-content-container #content4 {
+    display: block;
+}
+
+/* Styling Konten dalam Tab */
+.tab-content h4 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.tab-content ul {
+    margin: 10px 0 10px 20px;
+}
+
+.peta {
+    width: 80%; 
+    margin: 40px auto; 
+}
+
+.peta h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.peta iframe {
+    width: 100%; 
+    height: 90vh;
+    border-radius: 5px;
+}
+
+/* --- 1. Kontainer Utama & Header --- */
+.lainnya {
+    display: block;
+    width: 100%;
+    background-color: #f7f7f7;
+    padding: 40px 0; /* Tambahkan padding vertikal untuk ruang */
+}
+
+/* Memusatkan area Judul (Wisata Lainnya) */
+.lainnya article:first-child {
+    text-align: center; /* KUNCI: Memusatkan teks */
+    margin: 0 auto 20px auto; /* Hilangkan margin 25px, ganti dengan margin atas bawah */
+    max-width: 80%; /* Batasi lebar header agar seragam dengan konten utama Anda */
+}
+
+.lainnya h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.lainnya h4 {
+    font-size: 1rem;
+    color: #555;
+    font-weight: 400;
+}
+
+/* --- 2. Kontainer Kartu --- */
+.article-lainnya {
+    display: flex;
+    justify-content: space-between; /* Untuk membagi ruang secara rata */
+    width: 80%; /* KUNCI: Samakan lebar dengan kontainer tab Anda (80%) */
+    margin: 0 auto; /* Memusatkan kontainer kartu */
+}
+
+/* --- 3. Styling Setiap Kartu --- */
+.article-lainnya > a {
+    /* Setel lebar kartu secara spesifik untuk membagi ruang 1/4 */
+    width: 23%; /* Menggunakan 23% agar ada sedikit celah (margin) antar kartu */
+    margin: 0; /* Hilangkan margin horizontal untuk kontrol yang lebih baik */
+    
+    border: 1px solid #ccc; /* Ganti border grey dengan border yang lebih terang */
+    border-radius: 7px;
+    overflow: hidden; /* Penting agar gambar membulat di sudut atas */
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan ringan */
+    transition: transform 0.3s;
+    text-decoration: none;
+}
+
+.article-lainnya > a:hover {
+    transform: translateY(-5px); /* Efek saat di-hover */
+}
+
+.article-lainnya > a img{
+    /* Hapus border-radius di img, biarkan overflow: hidden pada div induk */
+    border-radius: 0; 
+    width: 100%;
+    height: 170px;
+}
+
+/* --- 4. Styling Teks di Dalam Kartu --- */
+.text4 {
+    display: block; /* Ganti dari display: flex; menjadi block */
+    padding: 10px 15px; /* Tambahkan padding di dalam kartu */
+}
+
+/* Styling Nama Wisata */
+.text4 p:first-child {
+    font-weight: bold; /* KUNCI: Teks pertama menjadi tebal */
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Styling Lokasi (📌 Bali) */
+.text4 p:last-child {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* --- FOOTER (LEBAR PENUH) --- */
+.footer {
+  background: #0a0a0a;
+  color: #ccc;
+  /* Footer full width */
+  padding: 30px 0; 
+  width: 100%;
+}
+
+.footer-content {
+  /* Konten footer tetap di dalam batas (8%) */
+  padding: 0 8%; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-left img {
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+.footer-left p {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.footer-right a {
+  color: #ccc;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.footer-right a:hover {
+  color: #fff;
+}
